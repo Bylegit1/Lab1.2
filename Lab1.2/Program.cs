@@ -15,6 +15,7 @@
             }
 
             var counter = 0;
+            var result = "";
 
             for (int i = 1; i < count; i++)
             {
@@ -23,7 +24,8 @@
                     counter++;
                 }
             }
-            Console.WriteLine("Знак меняется ровно: " + counter + " раз(а)");
+            result ="Знак меняется ровно: " + counter + " раз(а)";
+            Console.WriteLine(result);
             }
     }
 }
