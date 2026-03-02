@@ -4,7 +4,8 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            Console.WriteLine("Введите количество чисел в последовательности: ");
+            var count = int.Parse(Console.ReadLine());
         }
     }
 }
