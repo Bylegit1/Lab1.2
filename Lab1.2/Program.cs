@@ -1,6 +1,27 @@
 ﻿namespace Lab1._2
 {
-    internal class Program
+    public class SignChangeLogic
+    {
+        public static int CountSignChange(int[] massiv)
+        {
+            var counter = 0;
+
+            if (massiv == null || massiv.Length < 2)
+            {
+                return 0;
+            }
+
+            for (int i = 1; i < massiv.Length; i++)
+            {
+                if (massiv[i] * massiv[i - 1] < 0)
+                {
+                    counter++;
+                }
+            }
+            return counter;
+        }
+    }
+    class Program
     {
         static void Main(string[] args)
         {
@@ -14,16 +35,9 @@
                 massiv[i] = int.Parse(Console.ReadLine());
             }
 
-            var counter = 0;
+            var counter = SignChangeLogic.CountSignChange(massiv);
             var result = "";
 
-            for (int i = 1; i < count; i++)
-            {
-                if (massiv[i] * massiv[i - 1] < 0)
-                {
-                    counter++;
-                }
-            }
             result ="Знак меняется ровно: " + counter + " раз(а)";
             Console.WriteLine(result);
             }
